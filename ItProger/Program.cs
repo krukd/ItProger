@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 
 namespace ItProger
 {
@@ -60,18 +61,33 @@ namespace ItProger
 
             Подсказка: смотрите нужный метод в классе Array.*/
 
-           /* double[] array = { 3.3, 7.4, 0.3, 5.01, 45.2 };
-            Array.Reverse(array);
-            //Console.WriteLine(String.Join(',', array));//выводит все элементы перевернутого массива через запятую
-            Console.WriteLine("Элемент: " + array[array.Length - 1]);*/
+            /* double[] array = { 3.3, 7.4, 0.3, 5.01, 45.2 };
+             Array.Reverse(array);
+             //Console.WriteLine(String.Join(',', array));//выводит все элементы перевернутого массива через запятую
+             Console.WriteLine("Элемент: " + array[array.Length - 1]);*/
 
 
-            float[] nums = new float[] { 3.3f, 7.4f, 0.3f, 5.01f, 45.2f };
+            /*float[] nums = new float[] { 3.3f, 7.4f, 0.3f, 5.01f, 45.2f };
             // Выполняем сортировку
             Array.Reverse(nums);
             // Отображаем последний элемент
-            Console.Write("Элемент: " + nums[nums.Length - 1]);
+            Console.Write("Элемент: " + nums[nums.Length - 1]);*/
 
+            /*Создайте массив с данными:
+
+5, 0, 2, 7, 23, 9, 11
+При помощи цикла for выведите каждый элемент по отдельности на экран.
+
+Формат вывода: «Элемент с индексом index: el», где index – индекс текущего элемента, а el – 
+            значение элемента.
+*/
+
+            int[] nums = new int[] { 5, 0, 2, 7, 23, 9, 11 };
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                Console.WriteLine("Элемент с индексом " + i + ": " + nums[i]);
+            }
         }
     }
 }
