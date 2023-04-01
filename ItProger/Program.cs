@@ -82,12 +82,31 @@ namespace ItProger
             значение элемента.
 */
 
+            /* int[] nums = new int[] { 5, 0, 2, 7, 23, 9, 11 };
+
+             for (int i = 0; i < nums.Length; i++)
+             {
+                 Console.WriteLine("Элемент с индексом " + i + ": " + nums[i]);
+             }*/
+
+            /*У вас есть массив с данными:
+
+            5, 0, 2, 7, 23, 9, 11
+            При помощи цикла while выведите каждый элемент по отдельности на экран.
+
+            Формат вывода: «Элемент с индексом index: el», где index – индекс текущего элемента,
+            а el – значение элемента.*/
+
             int[] nums = new int[] { 5, 0, 2, 7, 23, 9, 11 };
 
-            for (int i = 0; i < nums.Length; i++)
+            var i = 0;
+
+            while (i < nums.Length)
             {
                 Console.WriteLine("Элемент с индексом " + i + ": " + nums[i]);
+                i++;
             }
+
         }
     }
 }
