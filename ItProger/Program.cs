@@ -1,4 +1,6 @@
-﻿namespace ItProger
+﻿using System;
+
+namespace ItProger
 {
     internal class Program
     {
@@ -30,8 +32,18 @@
             Выведите на экран третий элемент массива в формате: «Элемент: el», где el – 
             значение элемента.*/
 
-            char[] chars = { 'J', 'a', 'v', 'a', '!' };
-            Console.WriteLine("Элемент: " + chars[2]);
+            /*char[] chars = { 'J', 'a', 'v', 'a', '!' };
+            Console.WriteLine("Элемент: " + chars[2]);*/
+
+            
+           /*Создайте цикл for от 1 до 5 включительно. В каждой итерации выводите на экран фразу: 
+           «Номер элемента: num», где num – это индекс каждой итерации.*/
+
+            for (int i = 1; i < 6; i++)
+            {
+                Console.WriteLine("Номер элемента: " + i);
+            }
+
         }
     }
 }
