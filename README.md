@@ -1,1 +1,1 @@
-# ItProger
+# Solving problems in C#
