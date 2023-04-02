@@ -2,6 +2,7 @@
 using System.Globalization;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
+using System.Collections.Generic;
 
 namespace ItProger
 {
@@ -302,15 +303,44 @@ namespace ItProger
             Подсказка: класс Math работает с типом данных double, поэтому переменные 
             лучше создавать с этим типом.*/
 
-            Console.WriteLine("Результат: " + divideAndRound(500.05, 2.25, 3.01));
-        }
+            /* Console.WriteLine("Результат: " + divideAndRound(500.05, 2.25, 3.01));
+         }
 
-        public static double divideAndRound(double a, double b, double c)
-        {
-            double resOfDivide = a / b / c;
-            double res = Math.Ceiling(resOfDivide);
-            return res;
+         public static double divideAndRound(double a, double b, double c)
+         {
+             double resOfDivide = a / b / c;
+             double res = Math.Ceiling(resOfDivide);
+             return res;
 
+         }*/
+
+            /*Создайте массив «List». Добавьте в него элементы:
+
+            5, 6, 20, 1
+            При помощи цикла «for» выведите все элементы на экран в формате: 
+            «El: element», где element – значение элемента.*/
+            List<int> arrayList = new List<int>();
+
+            arrayList.Add(5);
+            arrayList.Add(6);
+            arrayList.Add(20);
+            arrayList.Add(1);
+
+            for (int i = 0; i < arrayList.Count; i++)
+            {
+                Console.WriteLine("El: " + arrayList[i]);
+            }
+
+            int[] array = new int[4];
+            array[0] = 5;
+            array[1] = 6;
+            array[2] = 20;
+            array[3] = 1;
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine("El: " + arrayList[i]);
+            }
         }
     }
 }
