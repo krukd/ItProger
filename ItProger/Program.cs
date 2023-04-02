@@ -177,11 +177,19 @@ namespace ItProger
 
             Реализуйте программу, дабы по итогу на экран выводилось сообщение «Верно».*/
 
-            int number = 20;
-            if (number != 5)
-            {
-                Console.Write("Верно");
-            }
+            /* int number = 20;
+             if (number != 5)
+             {
+                 Console.Write("Верно");
+             }*/
+
+            /*За счет класс DateTime получите текущую дату. Выведите на экран текущую 
+             * дату в формате: «MM.DD.YYYY».*/
+
+            // Получаем текущую дату
+            DateTime aDate = DateTime.Now;
+            // Отображаем её в нужном формате
+            Console.WriteLine(aDate.ToString("MM.dd.yyyy"));
         }
     }
 }
