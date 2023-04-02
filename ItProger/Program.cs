@@ -6,10 +6,10 @@ using System.Security.Cryptography.X509Certificates;
 namespace ItProger
 {
     internal class Program
-    { 
+    {
 
-       
-    
+
+
         static void Main(string[] args)
         {
             /*Console.WriteLine("Программирование на C#!");*/
@@ -259,7 +259,7 @@ namespace ItProger
 
             Вызовите функцию два раза внутри программы. При первом вызове передайте 
             значение: 23, а при втором вызове: -7.*/
-            printInfo(23);
+            /*printInfo(23);
             printInfo(-7);
            
         }
@@ -267,6 +267,25 @@ namespace ItProger
         {
             int res = number - 3;
             Console.WriteLine("Результат: " + res);
+        }*/
+
+            /*Создайте функцию «getElementsOfArray», что будет принимать в качестве 
+             * параметра массив данных.
+
+            Выполните вызов функции и передачу в неё следующего массива:
+
+            5, 7, 8, 10
+
+            Функция должна вывести на экран массив в формате: «5 / 10». То есть 
+            выводиться первый и последний элемент массива.*/
+
+            int[] array = { 5, 7, 8, 10 };
+            getElementsOfArray(array);
+
+        }
+
+        public static void getElementsOfArray(int[] array) {
+            Console.WriteLine(array[0] + " " + "/" + " " + array[array.Length-1]);
         }
     }
 }
