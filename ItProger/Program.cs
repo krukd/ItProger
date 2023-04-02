@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Reflection;
 
 namespace ItProger
@@ -97,7 +98,7 @@ namespace ItProger
             Формат вывода: «Элемент с индексом index: el», где index – индекс текущего элемента,
             а el – значение элемента.*/
 
-            int[] nums = new int[] { 5, 0, 2, 7, 23, 9, 11 };
+            /*int[] nums = new int[] { 5, 0, 2, 7, 23, 9, 11 };
 
             var i = 0;
 
@@ -105,8 +106,26 @@ namespace ItProger
             {
                 Console.WriteLine("Элемент с индексом " + i + ": " + nums[i]);
                 i++;
-            }
+            }*/
+            /*Ниже создан двумерный массив данных.При помощи циклов for выведите каждый 
+             * элемент по отдельности на экран в формате: «Элемент: el», где el – значение элемента.
 
+           Важно: никаких пропусков строк и прочих дополнительных выводов информации не создавайте.*/
+
+            int[,] x = {
+            { 0, 34, 2 },
+            { 3, 4, 5 }
+        };
+
+            for (int i = 0; i < x.GetLength(0); i++)
+            {
+                for (int j = 0; j < x.GetLength(1); j++)
+                {
+                    Console.WriteLine("Элемент: " + x[i, j]);
+
+                }
+
+            }
         }
     }
 }
