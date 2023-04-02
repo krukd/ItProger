@@ -112,20 +112,38 @@ namespace ItProger
 
            Важно: никаких пропусков строк и прочих дополнительных выводов информации не создавайте.*/
 
-            int[,] x = {
-            { 0, 34, 2 },
-            { 3, 4, 5 }
-        };
+            /* int[,] x = {
+             { 0, 34, 2 },
+             { 3, 4, 5 }
+         };
 
-            for (int i = 0; i < x.GetLength(0); i++)
-            {
-                for (int j = 0; j < x.GetLength(1); j++)
+             for (int i = 0; i < x.GetLength(0); i++)
+             {
+                 for (int j = 0; j < x.GetLength(1); j++)
+                 {
+                     Console.WriteLine("Элемент: " + x[i, j]);
+
+                 }
+
+             }*/
+
+
+            /*Ниже создан одномерный массив данных. При помощи цикла while найдите минимальный 
+             * элемент массива и выведите его на экран в формате: «Минимальный элемент: el», где 
+             * el – минимальный элемент.*/
+
+            int[] numbers = { 1, 7, 3, -4, 5, 2, 6, 4 };
+            int min = numbers[0];
+            int i = 1;
+
+            while (i < numbers.Length) {
+                if (numbers[i] < min)
                 {
-                    Console.WriteLine("Элемент: " + x[i, j]);
-
+                    min = numbers[i];
                 }
-
+                i++;
             }
+            Console.WriteLine("Минимальный элемент: " + min);
         }
     }
 }
