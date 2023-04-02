@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Globalization;
 using System.Reflection;
+using System.Security.Cryptography.X509Certificates;
 
 namespace ItProger
 {
     internal class Program
-    {
+    { 
+
+       
+    
         static void Main(string[] args)
         {
             /*Console.WriteLine("Программирование на C#!");*/
@@ -230,7 +234,7 @@ namespace ItProger
             El: 9
             El: 10*/
 
-            // Начинаем с чила 0
+            /*// Начинаем с чила 0
             int i = 0;
 
             do
@@ -247,7 +251,22 @@ namespace ItProger
                 Console.Write("El: " + i + " ");
                 // Условие нужно указать на 1 меньше
                 // из-за особенности цикла do while
-            } while (i < 10);
+            } while (i < 10);*/
+
+            /*Создайте функцию «printInfo», что будет принимать один параметр «number». 
+             * Из полученного числа (параметра) нужно вычитать число 3 и выводить результат
+             * на экран в формате: «Результат: res», где «res» – значение результата.
+
+            Вызовите функцию два раза внутри программы. При первом вызове передайте 
+            значение: 23, а при втором вызове: -7.*/
+            printInfo(23);
+            printInfo(-7);
+           
+        }
+        public static void printInfo(int number)
+        {
+            int res = number - 3;
+            Console.WriteLine("Результат: " + res);
         }
     }
 }
