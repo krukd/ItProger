@@ -319,7 +319,7 @@ namespace ItProger
             5, 6, 20, 1
             При помощи цикла «for» выведите все элементы на экран в формате: 
             «El: element», где element – значение элемента.*/
-            List<int> arrayList = new List<int>();
+            /*List<int> arrayList = new List<int>();
 
             arrayList.Add(5);
             arrayList.Add(6);
@@ -340,6 +340,24 @@ namespace ItProger
             for (int i = 0; i < array.Length; i++)
             {
                 Console.WriteLine("El: " + arrayList[i]);
+            }*/
+
+            /*Ниже есть массив «List». Выполните его сортировку по возрастанию элементов.
+
+            Выведите все элементы на экран через цикл «foreach» в формате: «El: el», где el – 
+            значение элемента.*/
+
+            List<int> nums = new List<int>();
+            nums.Add(5);
+            nums.Add(6);
+            nums.Add(20);
+            nums.Add(1);
+
+            nums.Sort();
+
+            foreach (var item in nums)
+            {
+                Console.WriteLine("El: " + item);
             }
         }
     }
