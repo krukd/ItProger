@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace ItProger
@@ -55,15 +56,15 @@ namespace ItProger
 
             Выводите в формате: «El: element», где element – значение элемента.*/
 
-            List<int> list = new List<int>();
+            /* List<int> list = new List<int>();
 
-            list.Add(4);
-            list.Add(7);
-            list.Add(2);
-            list.Add(8);
-            list.Add(0);
-            list.Add(3);
-            list.Add(9);
+             list.Add(4);
+             list.Add(7);
+             list.Add(2);
+             list.Add(8);
+             list.Add(0);
+             list.Add(3);
+             list.Add(9);*/
 
             /*double average = list.Average();
 
@@ -100,7 +101,7 @@ namespace ItProger
 
             Подсказка: для удаления используйте метод «RemoveAt».*/
 
-            List<int> numbers = new List<int>();
+            /*List<int> numbers = new List<int>();
             numbers.Add(4);
             numbers.Add(7);
             numbers.Add(2);
@@ -111,34 +112,59 @@ namespace ItProger
 
             deleteElements(numbers);
 
+*/
+            //}
 
-        }
-
-        /*public static void deleteElements(List<int> numbers)
-        {
-            numbers.RemoveAt(5);
-            numbers.RemoveAt(1);
-
-
-            foreach (int i in numbers)
+            /*public static void deleteElements(List<int> numbers)
             {
-                Console.WriteLine("El: " + i);
+                numbers.RemoveAt(5);
+                numbers.RemoveAt(1);
+
+
+                foreach (int i in numbers)
+                {
+                    Console.WriteLine("El: " + i);
+                }*/
+
+            /*public static void deleteElements(List<int> numbers)
+            {
+                // Нужно удалять по индексу, поэтому
+                // удаляем 4 и 0 элемент по индексу
+                // Важный момент:
+                // После удаления индексы смещаются.
+                // По этой причине лучше сперва удалить 
+                // 5 элемент, а потом 1
+                numbers.RemoveAt(4);
+                numbers.RemoveAt(0);
+
+                foreach (int el in numbers)
+                    Console.WriteLine("El: " + el);
             }*/
 
-        public static void deleteElements(List<int> numbers)
-        {
-            // Нужно удалять по индексу, поэтому
-            // удаляем 4 и 0 элемент по индексу
-            // Важный момент:
-            // После удаления индексы смещаются.
-            // По этой причине лучше сперва удалить 
-            // 5 элемент, а потом 1
-            numbers.RemoveAt(4);
-            numbers.RemoveAt(0);
 
-            foreach (int el in numbers)
-                Console.WriteLine("El: " + el);
+            /*Создайте список данных на основе класса «Dictionary». Добавьте в него ключи и
+             * значения, что представлены ниже:
+
+            "name": "Alex",
+            "age": "45",
+            "hobby": "football"
+            Выведите все элементы на экран в формате: «Ключ: key.Значение: value», где 
+            key – ключ элемента, а value – значение элемента.*/
+
+
+            Dictionary<string, string> people = new Dictionary<string, string>();
+
+            people.Add("name", "Alex");
+            people.Add("age", "45");
+            people.Add("hobby", "football");
+
+            foreach (var person in people)
+            {
+                Console.WriteLine($"Ключ: {person.Key}.Значение: {person.Value}");
+            }
+
         }
 
     }
-    }
+}
+    
