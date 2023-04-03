@@ -165,6 +165,9 @@ namespace ItProger
 
             Study student = new Study();
 
+            //Console.WriteLine("Value: " + student.course);
+
+            student.printCourse();
             Console.WriteLine("Value: " + student.course);
 
         }

@@ -16,5 +16,18 @@ namespace ItProger
     internal class Study
     {
         public string course = "C# Programming";
+
+
+
+        public string printCourse()
+        {
+            return course;
+        }
     }
+
+
+    /*Создайте метод «printCourse», что будет возвращать значение поля «course».
+
+    Создайте объект класса «Study» и обратитесь к методу «printCourse» для вывода 
+    значения поля «course» в формате: «Value: name», где name - значение переменной.*/
 }
