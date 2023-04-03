@@ -76,7 +76,7 @@ namespace ItProger
             }*/
 
             // Переменная для подсчета суммы
-            int summa = 0;
+            /*int summa = 0;
             foreach (int el in list)
                 summa += el;
 
@@ -85,11 +85,60 @@ namespace ItProger
 
             foreach (int el in list)
                 if (el > average)
-                    Console.Write("El: " + el);
+                    Console.Write("El: " + el);*/
 
+            /*Создайте функцию «deleteElements», что будет принимать в качестве 
+             * параметра массив данных «numbers».
 
+            Функция должна удалять элементы под порядковым номером 5 и 1 и далее 
+            выводить весь новый массив на экран.
+
+            Выполните вызов функции и передачу в неё следующего массива «numbers».
+
+            Функция должна выводить элементы в формате: «El: element», где element – 
+            значение элемента.
+
+            Подсказка: для удаления используйте метод «RemoveAt».*/
+
+            List<int> numbers = new List<int>();
+            numbers.Add(4);
+            numbers.Add(7);
+            numbers.Add(2);
+            numbers.Add(8);
+            numbers.Add(0);
+            numbers.Add(3);
+            numbers.Add(9);
+
+            deleteElements(numbers);
 
 
         }
+
+        /*public static void deleteElements(List<int> numbers)
+        {
+            numbers.RemoveAt(5);
+            numbers.RemoveAt(1);
+
+
+            foreach (int i in numbers)
+            {
+                Console.WriteLine("El: " + i);
+            }*/
+
+        public static void deleteElements(List<int> numbers)
+        {
+            // Нужно удалять по индексу, поэтому
+            // удаляем 4 и 0 элемент по индексу
+            // Важный момент:
+            // После удаления индексы смещаются.
+            // По этой причине лучше сперва удалить 
+            // 5 элемент, а потом 1
+            numbers.RemoveAt(4);
+            numbers.RemoveAt(0);
+
+            foreach (int el in numbers)
+                Console.WriteLine("El: " + el);
+        }
+
     }
-}
+    }
