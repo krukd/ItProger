@@ -15,13 +15,23 @@ namespace ItProger
     «Value: name», где name – значение переменной.*/
     internal class Study
     {
-        public string course = "C# Programming";
+        private string course;
+
+        /*Допишите в класс «Study» конструктор, что будет принимать один параметр и 
+         * будет устанавливать значение этого параметра в поле «course».
+
+        Создайте объект класса «Study». В качестве значения для поля «course» установите 
+        текст: «Изучение C# - это просто!». Обратитесь к методу «printCourse» для вывода 
+        значения поля «course».*/
+        public Study(string course) { 
+            this.course = course;
+        }
 
 
 
         public string printCourse()
         {
-            return course;
+            return this.course;
         }
     }
 

@@ -163,12 +163,12 @@ namespace ItProger
                 Console.WriteLine($"Ключ: {person.Key}.Значение: {person.Value}");
             }*/
 
-            Study student = new Study();
+            Study student = new Study("Изучение C# - это просто!");
 
             //Console.WriteLine("Value: " + student.course);
 
-            student.printCourse();
-            Console.WriteLine("Value: " + student.course);
+            //student.printCourse();
+            Console.WriteLine("Value: " + student.printCourse());
 
         }
 
