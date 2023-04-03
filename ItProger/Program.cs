@@ -3,6 +3,7 @@ using System.Globalization;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 using System.Collections.Generic;
+using System.Collections;
 
 namespace ItProger
 {
@@ -347,17 +348,39 @@ namespace ItProger
             Выведите все элементы на экран через цикл «foreach» в формате: «El: el», где el – 
             значение элемента.*/
 
-            List<int> nums = new List<int>();
-            nums.Add(5);
-            nums.Add(6);
-            nums.Add(20);
-            nums.Add(1);
+            /* List<int> nums = new List<int>();
+             nums.Add(5);
+             nums.Add(6);
+             nums.Add(20);
+             nums.Add(1);
 
-            nums.Sort();
+             nums.Sort();
 
-            foreach (var item in nums)
+             foreach (var item in nums)
+             {
+                 Console.WriteLine("El: " + item);
+             }*/
+
+
+            /*Создайте массив «ArrayList». Добавьте в него элементы при помощи метода 
+             * «Add»:
+
+            "Visual Basic", 344, 55
+            За счет метода «Remove» удалите элемент со значением 55 из массива. 
+            Выведите на экран все элементы через цикл «foreach» в формате: «Value: 
+            element», где element – значение элемента.*/
+
+
+            ArrayList list = new ArrayList();
+            list.Add("Visual Basic");
+            list.Add(344);
+            list.Add(55);
+
+            list.Remove(55);
+
+            foreach (var i in list)
             {
-                Console.WriteLine("El: " + item);
+                Console.WriteLine("Value: " + i);
             }
         }
     }
