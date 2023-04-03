@@ -152,7 +152,7 @@ namespace ItProger
             key – ключ элемента, а value – значение элемента.*/
 
 
-            Dictionary<string, string> people = new Dictionary<string, string>();
+            /*Dictionary<string, string> people = new Dictionary<string, string>();
 
             people.Add("name", "Alex");
             people.Add("age", "45");
@@ -161,7 +161,11 @@ namespace ItProger
             foreach (var person in people)
             {
                 Console.WriteLine($"Ключ: {person.Key}.Значение: {person.Value}");
-            }
+            }*/
+
+            Study student = new Study();
+
+            Console.WriteLine("Value: " + student.course);
 
         }
 
