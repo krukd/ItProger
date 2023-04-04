@@ -233,9 +233,6 @@ namespace ItProger
 
         Важно: для каждой переменной пропишите соответсвующий тип данных.
 
-             */
-
-
             short x = 5; // Целое число
             char symbol = 'F'; // Только символ
             string word = "Привет"; // Строковая переменная
@@ -245,7 +242,36 @@ namespace ItProger
             const int value = 67;
 
             // Выводим данные в консоль
-            Console.Write(word);
+            Console.WriteLine(word);
+
+
+
+            2642 дня записано в переменной. Определите количество лет, недель, дней
+            // Дней - 2642
+            // Вывод будет следующим
+            "Лет: 7, недель: 12, дней: 3"
+
+             */
+
+            int years, weeks, days;
+
+            days = 2642;
+
+            years = days / 365;
+
+            weeks = (days % 365) / 7;
+
+            days = days - ((years * 365) + (weeks * 7));
+
+            Console.Write("Years: " + years + ", ");
+            Console.Write("weeks: " + weeks + ", ");
+            Console.Write("days: " + days);
+
+
+
+
+
+
 
 
 
