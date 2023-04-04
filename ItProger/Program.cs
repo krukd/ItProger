@@ -113,14 +113,33 @@ namespace ItProger
             char s;
             double db;
 
-            // Для конвертации в short испльзуйте ToInt16 (для int - ToInt32)
+            /*// Для конвертации в short испльзуйте ToInt16 (для int - ToInt32)
             a = Convert.ToInt16(Console.ReadLine());
             // Для конвертации в ulong испльзуйте ToUInt64
             b = Convert.ToUInt64(Console.ReadLine());
             // Для конвертации в char испльзуйте ToChar
             s = Convert.ToChar(Console.ReadLine());
             // Для конвертации в double испльзуйте ToDouble
-            db = Convert.ToDouble(Console.ReadLine());
+            db = Convert.ToDouble(Console.ReadLine());*/
+
+
+
+            /*Создайте переменную со значением 5.
+
+
+
+            Выполните над ней операции:
+
+            умножьте её на 7;
+            выполните декременацию(уменьшение на один).*/
+
+            int a1 = 5;
+            // Сокращенная форма умножения
+            a1 *= 7;
+            // Декременация
+            a1--;
+
+            Console.Write("Number is: " + a1);
 
 
 
