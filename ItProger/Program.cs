@@ -33,8 +33,6 @@ namespace ItProger
 
             Продумайте типы данных для переменных, чтобы они максимально подходили под 
             каждое значение.
-             
-             */
 
 
             // Маленькое число, поэтому byte
@@ -52,6 +50,58 @@ namespace ItProger
             bool val = true;
             // Байтовая переменная
             byte simple = 0;
+
+            Попросите пользователя ввести:
+
+            имя
+            возраст
+            есть ли у него машина (true или false)
+
+
+            Выведите все значения, после их получения.
+             
+             */
+
+            Console.WriteLine("Enter your name: ");
+
+            string name = Console.ReadLine();
+            Console.WriteLine("Enter your age: ");
+
+            int age = int.Parse(Console.ReadLine());
+            Console.WriteLine("Do you have a car?");
+
+            string answer = Console.ReadLine();
+
+            bool yesOrNo = false;
+
+            if (answer == "yes")
+            {
+                yesOrNo = true;
+                //Console.WriteLine("You do have a car!");
+
+            } else
+            {
+                yesOrNo = false;
+                //Console.WriteLine("You do not have a car!");
+            }
+
+            
+            
+            Console.WriteLine("Your name is " + name);
+            Console.WriteLine("Your age is {0}", age);
+
+            if (yesOrNo)
+            {
+                Console.WriteLine("You do have a car!");
+            }
+            else
+            {
+                Console.WriteLine("You do not have a car!");
+            }
+            
+
+
+
 
 
 
