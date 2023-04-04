@@ -59,8 +59,6 @@ namespace ItProger
 
 
             Выведите все значения, после их получения.
-             
-             */
 
             Console.WriteLine("Enter your name: ");
 
@@ -100,6 +98,29 @@ namespace ItProger
             }
             
 
+
+            Получите от пользователя данные и запишите их в переменные с типами данных:
+
+            short
+            ulong
+            char
+            double. 
+             
+             */
+
+            short a;
+            ulong b;
+            char s;
+            double db;
+
+            // Для конвертации в short испльзуйте ToInt16 (для int - ToInt32)
+            a = Convert.ToInt16(Console.ReadLine());
+            // Для конвертации в ulong испльзуйте ToUInt64
+            b = Convert.ToUInt64(Console.ReadLine());
+            // Для конвертации в char испльзуйте ToChar
+            s = Convert.ToChar(Console.ReadLine());
+            // Для конвертации в double испльзуйте ToDouble
+            db = Convert.ToDouble(Console.ReadLine());
 
 
 
