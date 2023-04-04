@@ -163,13 +163,44 @@ namespace ItProger
                 Console.WriteLine($"Ключ: {person.Key}.Значение: {person.Value}");
             }*/
 
-            Study student = new Study("Изучение C# - это просто!");
+            /*Study student = new Study("Изучение C# - это просто!");
 
             //Console.WriteLine("Value: " + student.course);
 
             //student.printCourse();
             Console.WriteLine("Value: " + student.printCourse());
 
+
+
+
+            Создайте программу, что будет запрашивать два числа у пользователя. 
+
+
+
+         Полученные данные поместите в переменные. Поменяйте местами значения в переменных.
+            
+             
+             
+             */
+
+
+            // Создаем необходимые переменные
+            int num_1, num_2, temp;
+            // Получаем первое число
+            Console.Write("Первое число: ");
+            num_1 = int.Parse(Console.ReadLine());
+            // Получаем второе число
+            Console.Write("Второе число: ");
+            num_2 = int.Parse(Console.ReadLine());
+
+            // Меняем переменные местами
+            temp = num_1;
+            num_1 = num_2;
+            num_2 = temp;
+
+            // Выводим числа на экран
+            Console.WriteLine("Первое число: " + num_1);
+            Console.WriteLine("Второе число: " + num_2);
         }
 
     }
