@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
+
 namespace ItProger
 {
     internal class Program
@@ -108,11 +109,11 @@ namespace ItProger
              
              */
 
-            short a;
+            /*short a;
             ulong b;
             char s;
             double db;
-
+*/
             /*// Для конвертации в short испльзуйте ToInt16 (для int - ToInt32)
             a = Convert.ToInt16(Console.ReadLine());
             // Для конвертации в ulong испльзуйте ToUInt64
@@ -128,10 +129,10 @@ namespace ItProger
 
 
 
-            Выполните над ней операции:
+           *//* Выполните над ней операции:
 
             умножьте её на 7;
-            выполните декременацию(уменьшение на один).*/
+            выполните декременацию(уменьшение на один).*//*
 
             int a1 = 5;
             // Сокращенная форма умножения
@@ -140,14 +141,33 @@ namespace ItProger
             a1--;
 
             Console.Write("Number is: " + a1);
+*/
+
+
+            EnterNameAge();
 
 
 
 
+        }
 
+        public static void EnterNameAge()
+        {
 
+            // Создаем переменные с пустыми значениями
+            string name;
+            int age;
 
+            Console.WriteLine("Введите ваше имя: ");
+            // Получаем целую строку от пользователя
+            name = Console.ReadLine();
 
+            Console.WriteLine("Введите ваш возраст: ");
+            // Получаем строку и конвертируем её в число
+            age = int.Parse(Console.ReadLine());
+
+            // Выводим данные на экран
+            Console.WriteLine("Привет, " + name + "! Тебе уже " + age);
         }
 
     }
