@@ -146,7 +146,9 @@ namespace ItProger
 
             //EnterNameAge();
 
-            UrlAddress();
+            //UrlAddress();
+
+            DepositCalculator();
 
 
 
@@ -184,6 +186,37 @@ namespace ItProger
             // Получиться массив состоящий из двух элементов
             // Выводим в консоль последний элемент массива
             Console.Write("Domain name: " + split[split.Length - 1]);
+        }
+
+        /*Сумма: 1250
+        Годы: 5
+        Процент: 12
+        1 год - 1400
+        2 год - 1568
+        3 год - 1756
+        4 год - 1966
+        После 4 лет сумма будет - 1966*/
+        public static void DepositCalculator()
+        {
+            Console.WriteLine("Введите сумму, которую хотите положить на счет: ");
+
+            double sum = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("На сколько лет хотите положить деньги? ");
+
+            int years = int.Parse(Console.ReadLine());
+
+            int persents = 12;
+
+            
+            for (int i = 1; i < years + 1; i++)
+            {
+                sum += sum /100 * 12;
+
+                Console.WriteLine(i + " year - " + Math.Round(sum));
+            }
+
+            Console.WriteLine("После 5 лет ваш баланс будет составлять {0}", Math.Round(sum));
         }
 
     }
