@@ -144,7 +144,9 @@ namespace ItProger
 */
 
 
-            EnterNameAge();
+            //EnterNameAge();
+
+            UrlAddress();
 
 
 
@@ -168,6 +170,17 @@ namespace ItProger
 
             // Выводим данные на экран
             Console.WriteLine("Привет, " + name + "! Тебе уже " + age);
+        }
+
+        public static void UrlAddress() {
+
+
+            Console.WriteLine("Enter URL of any web site: ");
+
+            string url = Console.ReadLine();
+            string[] words = url.Split('.');
+
+            Console.WriteLine(words[1]);
         }
 
     }
