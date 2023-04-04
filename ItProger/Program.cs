@@ -175,12 +175,15 @@ namespace ItProger
         public static void UrlAddress() {
 
 
-            Console.WriteLine("Enter URL of any web site: ");
+            // Получаем веб сайт от пользователя
+            Console.Write("Enter website: ");
+            string website = Console.ReadLine();
 
-            string url = Console.ReadLine();
-            string[] words = url.Split('.');
-
-            Console.WriteLine(words[1]);
+            // Разделяем слово по символу точка
+            string[] split = website.Split('.');
+            // Получиться массив состоящий из двух элементов
+            // Выводим в консоль последний элемент массива
+            Console.Write("Domain name: " + split[split.Length - 1]);
         }
 
     }
