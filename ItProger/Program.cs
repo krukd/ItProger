@@ -12,7 +12,9 @@ namespace ItProger
             
             //DepositCalculator();
 
-            Calcilator();
+            //Calcilator();
+
+            EmptyString();
 
 
 
@@ -123,10 +125,27 @@ namespace ItProger
                 Console.WriteLine("Результат вычитания ваших чисел равен {0}", substraction);
             }else { Console.WriteLine("Выберите номер операции, которую хотите произвести с вашими числами"); }
 
-
-
-
         }
+
+        //Пустая строка
+        public static void EmptyString() {
+            // Изначально создаем строку с пустым значением
+            string user_input = "";
+            // Используем специальную функцию IsNullOrWhiteSpace,
+            // которая проверяет является ли строка пустой или содержит лишь пробелы.
+            // Цикл будет работать до тех пор, пока строка будет пустой
+            // или будет состоять из пробелов
+            while (String.IsNullOrWhiteSpace(user_input))
+            {
+                // Получаем строку от пользователя
+                Console.Write("Enter something: ");
+                user_input = Console.ReadLine();
+            }
+
+            // Выводим сообщение после цикла
+            Console.WriteLine("Hooray! You done that!");
+        }
+
 
     }
 }
