@@ -10,36 +10,40 @@ namespace ItProger
         static void Main(string[] args)
         {
 
-            /*Сравнение строк
-            Напишите программу, которая будет сравнивать количество символов в двух 
-            произвольных строках, введенных пользователем.
+            /*Создание и вывод массива
+            Напишите программу для определения массива A из 10 целых элементов. 
+            Попросите пользователя заполнить массив цифрами. 
 
 
 
-            Пример:
+            В конце программы выведите массив на экран в одну строку.*/
 
-            // Первая строка: Обычная строка
-            // Вторая строка: Уже другая строка
-            // результат: Обычная строка меньше чем Уже другая строка*/
-
-            StringComparison();
+            Array();
         }
 
-        public static void StringComparison()
+        public static void Array()
         {
+            int[] array = new int[10];
 
-            Console.Write("Введите первую строку ");
-            string firstString = Console.ReadLine();
-            Console.Write("Введите вторую строку ");
-            string secondString = Console.ReadLine();
 
-            if(firstString.Length > secondString.Length) {
-
-                Console.WriteLine(firstString + "больше, чем " + secondString);
+            Console.WriteLine("To fill the array with numbers enter any number and press Enter and repeat 10 times ");
+            for (int i = 0; i < array.Length; i++)
+            {
+                
+                array[i] = int.Parse(Console.ReadLine());
             }
-            else { Console.WriteLine(secondString + " больше, чем " + firstString); }
 
+            Console.Write("Полученный массив выглядит следующим образом ");
+
+            foreach (var item in array)
+            {
+                
+                Console.Write(item + " ");
+
+
+            }
         }
+
     }
 }
 
