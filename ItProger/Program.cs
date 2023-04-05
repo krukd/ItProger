@@ -9,29 +9,44 @@ namespace ItProger
     {
         static void Main(string[] args)
         {
-            /*Проверка переменных
-            Проверить две переменные на их четность. Если обе четные, то выдается 
-            значение true, иначе false.
+            /*Обычная бухгалтерия
+            Создайте программу, которая будет рассчитывать сальдо торгового баланса. В 
+            случае положительного сальдо (превышение экспорта над импортом) просчитывать 
+            прибыль, а в случае отрицательного сальдо (превышение импорта над экспортом) 
+            рассчитать потери.
 
 
 
-            Важно: проверку необходимо выполнить при помощи сокращенной формы if else.
-            */
+            Например:
 
-            int a = 10; int b = 19;
-            
-            Console.WriteLine(IsEvenOrOdd(a, b));
+            // Переменные: потери - 750 и прибыль - 345
+            // Программа выдаст результат:
+            "Ваши убытки составили: 405"
+            // В случае прибыли будет подсчитана прибыль*/
+
+            Accounting();
 
         }
 
-
-        public static bool IsEvenOrOdd(int a, int b)
+        public static void Accounting()
         {
-            if(a % 2 == 0 && b % 2 == 0) return true;
-            return false;
-        }
+            Console.Write("Каковы ваши убыки в этом месяце? ");
+            int loss = int.Parse(Console.ReadLine());
+            Console.Write("Какова ваша прибыль в этом месяце? ");
+            int profit = int.Parse(Console.ReadLine());
 
-        
+
+            if(loss > profit)
+            {
+                loss -= profit;
+                Console.Write("Ваши убытки составили: {0}", loss);
+            }
+            else
+            {
+                profit -= loss;
+                Console.Write("Ваша прибыль составила: {0}", profit);
+            }
+        }
     }
 }
 
