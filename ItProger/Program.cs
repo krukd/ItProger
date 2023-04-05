@@ -9,42 +9,39 @@ namespace ItProger
     {
         static void Main(string[] args)
         {
-            /*Обычная бухгалтерия
-            Создайте программу, которая будет рассчитывать сальдо торгового баланса. В 
-            случае положительного сальдо (превышение экспорта над импортом) просчитывать 
-            прибыль, а в случае отрицательного сальдо (превышение импорта над экспортом) 
-            рассчитать потери.
+
+            /*Определение дня недели
+            Введите число от 1 до 7, которое будет соответствовать дню недели.
 
 
 
-            Например:
+            Например: при вводе числа 1 на экране будет выводиться «Monday» и т. д.
 
-            // Переменные: потери - 750 и прибыль - 345
-            // Программа выдаст результат:
-            "Ваши убытки составили: 405"
-            // В случае прибыли будет подсчитана прибыль*/
 
-            Accounting();
 
+            Сделайте подобную проверку при помощи операторов switch case.*/
+
+            DayOfWeek();
         }
 
-        public static void Accounting()
+        public static void DayOfWeek()
         {
-            Console.Write("Каковы ваши убыки в этом месяце? ");
-            int loss = int.Parse(Console.ReadLine());
-            Console.Write("Какова ваша прибыль в этом месяце? ");
-            int profit = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter number from 1 to 7 ");
+
+            int number = int.Parse(Console.ReadLine());
 
 
-            if(loss > profit)
+            switch (number)
             {
-                loss -= profit;
-                Console.Write("Ваши убытки составили: {0}", loss);
-            }
-            else
-            {
-                profit -= loss;
-                Console.Write("Ваша прибыль составила: {0}", profit);
+                case 1: Console.WriteLine("Monday"); break;
+                case 2: Console.WriteLine("Tuesday"); break;
+                case 3: Console.WriteLine("Wednesday"); break;
+                case 4: Console.WriteLine("Thursday"); break;
+                case 5: Console.WriteLine("Friday"); break;
+                case 6: Console.WriteLine("Saturday"); break;
+                case 7: Console.WriteLine("Sunday"); break;
+
             }
         }
     }
