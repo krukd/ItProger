@@ -10,39 +10,35 @@ namespace ItProger
         static void Main(string[] args)
         {
 
-            /*Определение дня недели
-            Введите число от 1 до 7, которое будет соответствовать дню недели.
+            /*Сравнение строк
+            Напишите программу, которая будет сравнивать количество символов в двух 
+            произвольных строках, введенных пользователем.
 
 
 
-            Например: при вводе числа 1 на экране будет выводиться «Monday» и т. д.
+            Пример:
 
+            // Первая строка: Обычная строка
+            // Вторая строка: Уже другая строка
+            // результат: Обычная строка меньше чем Уже другая строка*/
 
-
-            Сделайте подобную проверку при помощи операторов switch case.*/
-
-            DayOfWeek();
+            StringComparison();
         }
 
-        public static void DayOfWeek()
+        public static void StringComparison()
         {
 
-            Console.Write("Enter number from 1 to 7 ");
+            Console.Write("Введите первую строку ");
+            string firstString = Console.ReadLine();
+            Console.Write("Введите вторую строку ");
+            string secondString = Console.ReadLine();
 
-            int number = int.Parse(Console.ReadLine());
+            if(firstString.Length > secondString.Length) {
 
-
-            switch (number)
-            {
-                case 1: Console.WriteLine("Monday"); break;
-                case 2: Console.WriteLine("Tuesday"); break;
-                case 3: Console.WriteLine("Wednesday"); break;
-                case 4: Console.WriteLine("Thursday"); break;
-                case 5: Console.WriteLine("Friday"); break;
-                case 6: Console.WriteLine("Saturday"); break;
-                case 7: Console.WriteLine("Sunday"); break;
-
+                Console.WriteLine(firstString + "больше, чем " + secondString);
             }
+            else { Console.WriteLine(secondString + " больше, чем " + firstString); }
+
         }
     }
 }
