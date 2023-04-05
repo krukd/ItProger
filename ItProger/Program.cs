@@ -9,40 +9,38 @@ namespace ItProger
     {
         static void Main(string[] args)
         {
-
-            /*Создание и вывод массива
-            Напишите программу для определения массива A из 10 целых элементов. 
-            Попросите пользователя заполнить массив цифрами. 
+            /*Создайте двумерный массив и выведите его на экран при помощи циклов while.
 
 
 
-            В конце программы выведите массив на экран в одну строку.*/
+            Двумерный массив данных:
 
-            Array();
-        }
-
-        public static void Array()
-        {
-            int[] array = new int[10];
+                        int[,] x = { { 0, 34, 2 }, { 9, 12, 18 }, { 3, 4, 5 } };
+            */
 
 
-            Console.WriteLine("To fill the array with numbers enter any number and press Enter and repeat 10 times ");
-            for (int i = 0; i < array.Length; i++)
+            int length = 3;
+
+            int[,] x = { { 0, 34, 2 }, { 9, 12, 18 }, { 3, 4, 5 } };
+
+            int i = 0;
+
+            while (i < length)
             {
-                
-                array[i] = int.Parse(Console.ReadLine());
+                int j = 0;
+
+                while (j < length)
+                {
+                    Console.Write(x[i, j] + " ");
+                    j++;
+                }
+
+                i++;
             }
 
-            Console.Write("Полученный массив выглядит следующим образом ");
-
-            foreach (var item in array)
-            {
-                
-                Console.Write(item + " ");
 
 
-            }
-        }
+        }   
 
     }
 }
