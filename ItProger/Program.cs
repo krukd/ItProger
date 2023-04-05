@@ -14,7 +14,9 @@ namespace ItProger
 
             //Calcilator();
 
-            EmptyString();
+            //EmptyString();
+
+            EnterThreeWords();
 
 
 
@@ -144,6 +146,43 @@ namespace ItProger
 
             // Выводим сообщение после цикла
             Console.WriteLine("Hooray! You done that!");
+        }
+
+
+        /*Ввод данных с клавиатуры
+        Попросите пользователя ввести три слова через пробел. 
+
+
+
+        Если пользователь введет менее трех слов, то выполните получение данных 
+        повторно. 
+
+
+
+        Просите пользователя ввести данные до тех пор, пока не будет введено как 
+        минимум три слова через пробел.*/
+
+        public static void EnterThreeWords()
+        {
+
+            int count = 0;
+
+            while (count != 3)
+            {
+
+                Console.Write("Введите 3 слова через пробел ");
+                string userInput = Console.ReadLine();
+
+
+                 count = userInput.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries).Length;
+
+                if (count != 3)
+                {
+
+                    Console.WriteLine("Вы ввели {0} слов, а нужно ввести 3 слова через пробел", count);
+                }
+
+            }       
         }
 
 
