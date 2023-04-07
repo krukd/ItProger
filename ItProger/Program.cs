@@ -13,6 +13,44 @@ namespace ItProger
         {
 
 
+            Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
+
+            var color = Console.ReadLine();
+
+            if (color == "red")
+            {
+                Console.BackgroundColor = ConsoleColor.Red;
+                Console.ForegroundColor = ConsoleColor.Black;
+
+                Console.WriteLine("Your color is red!");
+            }
+
+            else if (color == "green")
+            {
+                Console.BackgroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.Black;
+
+                Console.WriteLine("Your color is green!");
+            }
+            else
+            {
+                Console.BackgroundColor = ConsoleColor.Cyan;
+                Console.ForegroundColor = ConsoleColor.Black;
+
+                Console.WriteLine("Your color is cyan!");
+            }
+            var a1 = 7;
+            var b1 = 7;
+
+            if (a1 == b1)
+            {
+                Console.WriteLine("Условие истинно");
+            }
+            else
+            {
+                Console.WriteLine("Условие ложно");
+            }
+
             /*Запишите код, который проверяет следующее выражение: переменная A типа int 
              * меньше переменной B типа int, или переменная X типа double больше переменной 
              * Y типа double.
@@ -30,6 +68,10 @@ namespace ItProger
             Y = 20;
             bool C = (A < B) || (X > Y);
             Console.WriteLine(C);
+
+            var inv = true;
+            var result = !inv;
+            Console.WriteLine(result);
 
 
 
