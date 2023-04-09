@@ -12,22 +12,14 @@ namespace ItProger
             
         {
 
-            Console.WriteLine("Введите свое имя ");
-            string name = Console.ReadLine();
-            //Console.WriteLine(name);
-            Console.WriteLine("Ваше имя по буквам: ");
-            char [] array = name.ToArray();
+            string name = "Dima";
 
-            for(int i = 0; i < array.Length; i++)
+            char [] array = name.ToArray();
+            var reverseArray = array.Reverse();
+            foreach ( var i in reverseArray )
             {
-                Console.Write(array[i] + " ");
+                Console.Write(i);
             }
-            /*foreach (char c in array)
-            {
-                Console.Write(c + " ");
-                
-            }*/
-            Console.Write(" Последняя буква вашего имени: " + array[array.Length - 1]);
         }
 
     }
