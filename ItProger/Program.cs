@@ -11,47 +11,45 @@ namespace ItProger
 
 
         {
+            //Задайте одномерный массив и напишите алгоритм, который находит в нем
+            //количество положительных чисел.
+            var arr = new int[] { 5, 6, -9, 1, 2, 3, -4 };
 
-            var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
-
-            int sum = 0;
-
+            int count = 0;
             for (int i = 0; i < arr.Length; i++)
             {
-                sum += arr[i];
+                if (arr[i] > 0)
+                {
+                    count++;
+                }
             }
 
-            Console.WriteLine(sum);
+            Console.WriteLine(count);
 
 
+            int[,] array = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
 
+            /*int temp = 0;
+            foreach (var item in array) if (item > 0)
+                    temp++;
+            Console.WriteLine(temp);*/
 
-            //##################################
+            int temp = 0;
 
+            for (int i = 0; i <= array.GetUpperBound(0); i++) {
+            
 
-            int[][] array = new int[3][];
-
-            array[0] = new int[2] { 1, 2 };
-            array[1] = new int[3] { 1, 2, 3 };
-            array[2] = new int[5] { 1, 2, 3, 4, 5 };
-
-
-            foreach (var num in array)
-            {
-                foreach (var item in num)
+                for (int j = 0; j <= array.GetUpperBound(1); j++)
                 {
-                    Console.Write(item + " ");
+                    if (array[i, j] > 0)
+                    {
+                        temp++;
+                    }
                 }
-                Console.WriteLine();
             }
-            /*for (int i = 0;i < array.Length; i++)
-            {
-                for (int j = 0; j < array[i].Length; j++)
-                {
-                    Console.Write(array[i][j] + " ");
-                }
-                Console.WriteLine();
-            }*/
+
+            Console.WriteLine(temp);
+
         }
     }
 }
