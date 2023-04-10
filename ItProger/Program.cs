@@ -53,21 +53,7 @@ namespace ItProger
                     Console.WriteLine("run ");
                     break;
                 }
-                /*if(input == command1)
-                {
-                    Console.WriteLine("cant scan files for viruses ");
-                }
-
-                if(input == command3)
-                {
-                    gameMode = false;
-                }
-
-            if (input == command4)
-                {
-                    Console.WriteLine("run ");
-                    break;
-                }*/
+                
 
 
 
