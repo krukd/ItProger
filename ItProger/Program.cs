@@ -12,9 +12,30 @@ namespace ItProger
 
 
         {
-            int startSalary = 100;
 
-            while (true)
+            /*int startSalary = 100;
+                        bool moreSalary = true;
+
+                        while (moreSalary)
+                        {
+                            Console.WriteLine($"I will give you {startSalary} dollars, ok?");
+
+                            string answer = Console.ReadLine();
+                            if (answer == "more")
+                            {
+                                startSalary = startSalary + 100;
+                            }
+                            if (answer == "ok")
+                            {
+                                moreSalary = false;
+                            }
+                        }
+
+                        Console.WriteLine($"Your salary is {startSalary} dollars.");*/
+            int startSalary = 100;
+            bool flag = true;
+
+            while (flag)
             {
 
                 Console.WriteLine("I will give you {0} dollars, ok?", startSalary);
@@ -25,11 +46,12 @@ namespace ItProger
                 {
                     startSalary = startSalary + 100;
                     //Console.WriteLine();
-                }else if (answer == "ok")
+                }if (answer == "ok")
                 {
                     Console.WriteLine("Your salary is {0}", startSalary);
-                    break;
+                    flag = false;
                 }
+
             }
 
             
