@@ -12,55 +12,37 @@ namespace ItProger
 
 
         {
-            string command1 = "scan";
-            string command2 = "hide";
-            string command3 = "unhide";
-            string command4 = "game over";
-            int number = 1;
-
-            bool gameMode = false;
-
-
-            Console.WriteLine("Enter your command: ");
-
-            while (true)
-            {   
-                string input = Console.ReadLine();
-
-                if(input == command1 && gameMode == false)
-                {
-
-                    Console.WriteLine("scanning file {0}", number);
-                    number++;
-                }
-
-                if (input == command2 && gameMode == false)
-                {
-                    gameMode = true;
-                }
-
-                if(input == command1 && gameMode == true) { 
-                    Console.WriteLine("cant scan files for viruses "); 
-                }
-
-                if (input == command3)
-                {
-                    gameMode = false;
-                }
-
-                if (input == command4)
-                {
-                    Console.WriteLine("run ");
-                    break;
-                }
-                
-
-
-
-            }
+            /*Create a method named "PrintMax" that takes two int parameters and prints 
+             * the larger of the two. Call this method from the Main method with parameters 
+             * 75 and 114.*/
             
 
+            Console.WriteLine(WhichGreater(75, 114));
 
+            Console.WriteLine("Enter number ");
+            double number = double.Parse(Console.ReadLine());
+            PrintCubeVolume(number);
+
+        }
+
+        public static int WhichGreater(int number1,  int number2)
+        {
+
+            if (number1 > number2)
+            {
+                return number1;
+            }
+            else return number2;      
+        }
+
+
+        public static double PrintCubeVolume(double sideLength)
+        {
+
+            double volume = Math.Pow(sideLength, 3);
+            Console.WriteLine(Math.Pow(sideLength, 3));
+
+            return volume;
         }
     }
 }
