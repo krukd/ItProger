@@ -12,49 +12,69 @@ namespace ItProger
 
 
         {
+            string command1 = "scan";
+            string command2 = "hide";
+            string command3 = "unhide";
+            string command4 = "game over";
+            int number = 1;
 
-            /*int startSalary = 100;
-                        bool moreSalary = true;
+            bool gameMode = false;
 
-                        while (moreSalary)
-                        {
-                            Console.WriteLine($"I will give you {startSalary} dollars, ok?");
 
-                            string answer = Console.ReadLine();
-                            if (answer == "more")
-                            {
-                                startSalary = startSalary + 100;
-                            }
-                            if (answer == "ok")
-                            {
-                                moreSalary = false;
-                            }
-                        }
+            Console.WriteLine("Enter your command: ");
 
-                        Console.WriteLine($"Your salary is {startSalary} dollars.");*/
-            int startSalary = 100;
-            bool flag = true;
+            while (true)
+            {   
+                string input = Console.ReadLine();
 
-            while (flag)
-            {
-
-                Console.WriteLine("I will give you {0} dollars, ok?", startSalary);
-
-                string answer = Console.ReadLine();
-
-                if (answer == "more")
+                if(input == command1 && gameMode == false)
                 {
-                    startSalary = startSalary + 100;
-                    //Console.WriteLine();
-                }if (answer == "ok")
-                {
-                    Console.WriteLine("Your salary is {0}", startSalary);
-                    flag = false;
+
+                    Console.WriteLine("scanning file {0}", number);
+                    number++;
                 }
 
-            }
+                if (input == command2 && gameMode == false)
+                {
+                    gameMode = true;
+                }
 
+                if(input == command1 && gameMode == true) { 
+                    Console.WriteLine("cant scan files for viruses "); 
+                }
+
+                if (input == command3)
+                {
+                    gameMode = false;
+                }
+
+                if (input == command4)
+                {
+                    Console.WriteLine("run ");
+                    break;
+                }
+                /*if(input == command1)
+                {
+                    Console.WriteLine("cant scan files for viruses ");
+                }
+
+                if(input == command3)
+                {
+                    gameMode = false;
+                }
+
+            if (input == command4)
+                {
+                    Console.WriteLine("run ");
+                    break;
+                }*/
+
+
+
+            }
             
+
+
         }
     }
 }
