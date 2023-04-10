@@ -12,37 +12,30 @@ namespace ItProger
 
 
         {
-            /*Create a method named "PrintMax" that takes two int parameters and prints 
-             * the larger of the two. Call this method from the Main method with parameters 
-             * 75 and 114.*/
-            
-
-            Console.WriteLine(WhichGreater(75, 114));
+            int previous = 1;
+            int current = 1;
 
             Console.WriteLine("Enter number ");
-            double number = double.Parse(Console.ReadLine());
-            PrintCubeVolume(number);
+            int number = int.Parse(Console.ReadLine());
 
-        }
+            Console.Write(previous + " " + current);
 
-        public static int WhichGreater(int number1,  int number2)
-        {
-
-            if (number1 > number2)
+            for (int i = 0; i < number - 2; i++)
             {
-                return number1;
+                Console.Write(" ");
+                int next = GetNextFibonacci(previous, current);
+                Console.Write(next);
+
+                
+                previous = current;
+                current = next;
             }
-            else return number2;      
         }
 
-
-        public static double PrintCubeVolume(double sideLength)
+        public static int GetNextFibonacci(int previous, int current)
         {
-
-            double volume = Math.Pow(sideLength, 3);
-            Console.WriteLine(Math.Pow(sideLength, 3));
-
-            return volume;
+            int fibonacci = previous + current;
+            return fibonacci;
         }
     }
 }
