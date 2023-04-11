@@ -12,31 +12,61 @@ namespace ItProger
 
 
         {
-            int previous = 1;
-            int current = 1;
+            Console.WriteLine("Enter your word: ");
 
-            Console.WriteLine("Enter number ");
-            int number = int.Parse(Console.ReadLine());
 
-            Console.Write(previous + " " + current);
 
-            for (int i = 0; i < number - 2; i++)
+            //char [] alphabet = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+
+            string word = Console.ReadLine();
+
+            while (word != "exit")
             {
-                Console.Write(" ");
-                int next = GetNextFibonacci(previous, current);
-                Console.Write(next);
+                char letter = word[0];
+                char letterToLowerCase = char.ToLower(letter);
 
-                
-                previous = current;
-                current = next;
+                if(letterToLowerCase >= 'a' && letterToLowerCase <= 'f' ) {
+                    FromAToF(word);
+                }else if(letterToLowerCase >= 'g' && letterToLowerCase <= 'l')
+                {
+                    FromGToL(word);
+                }
+                else if (letterToLowerCase >= 'm' && letterToLowerCase <= 'r')
+                {
+                    FromMToR(word);
+                }
+                else
+                {
+                    FromSToZ(word);
+                }
+
+                word = Console.ReadLine();
             }
+
+
         }
 
-        public static int GetNextFibonacci(int previous, int current)
+        public static void FromAToF(string word)
         {
-            int fibonacci = previous + current;
-            return fibonacci;
+            Console.WriteLine("FromAToF executes {0}", word);
         }
+
+        public static void FromGToL(string word)
+        {
+            Console.WriteLine("FromGToL executes {0}", word);
+        }
+
+        public static void FromMToR(string word)
+        {
+            Console.WriteLine("FromMToR executes {0}", word);
+        }
+
+        public static void FromSToZ(string word)
+        {
+            Console.WriteLine("FromSToZ executes {0}", word);
+        }
+
+
     }
 }
 
